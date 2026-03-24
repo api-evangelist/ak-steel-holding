@@ -1,0 +1,7 @@
+aid: ak-steel-holding
+url: https://raw.githubusercontent.com/api-evangelist/ak-steel-holding/refs/heads/main/apis.yml
+modified: '2026-03-23'
+apis: []
+common:
+  - type: Website
+    url: https://www.ak-steel-holding.com
