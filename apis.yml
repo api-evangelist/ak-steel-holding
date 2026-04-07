@@ -1,7 +1,12 @@
 aid: ak-steel-holding
-url: https://raw.githubusercontent.com/api-evangelist/ak-steel-holding/refs/heads/main/apis.yml
+url: 
+  https://raw.githubusercontent.com/api-evangelist/ak-steel-holding/refs/heads/main/apis.yml
 modified: '2026-03-23'
 apis: []
 common:
   - type: Website
     url: https://www.ak-steel-holding.com
+description: >-
+  AK Steel Holding is a producer of flat-rolled carbon, stainless, and electrical
+  steel products as well as carbon and stainless tubular products serving automotive,
+  infrastructure, manufacturing, and electrical power markets.
