@@ -38,6 +38,8 @@ apis:
       - type: Documentation
         url: https://ir.aksteel.com/
 common:
+  - type: DomainSecurity
+    url: security/ak-steel-holding-domain-security.yml
   - type: LinkedIn
     url: https://www.linkedin.com/company/ak-steel
   - type: Website
