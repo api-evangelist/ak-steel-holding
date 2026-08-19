@@ -31,7 +31,7 @@ description: >-
   Cleveland-Cliffs Inc. in March 2020 and now operates as a subsidiary.
 created: '2025-01-01'
 modified: '2026-04-19'
-specificationVersion: '0.19'
+specificationVersion: '0.23'
 apis:
   - aid: ak-steel-holding:investor-relations
     name: AK Steel Investor Relations
