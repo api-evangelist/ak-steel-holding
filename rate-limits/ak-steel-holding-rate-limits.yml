@@ -4,33 +4,46 @@ schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main
 provider: AK Steel Holding
 providerId: ak-steel-holding
 created: '2026-05-04'
-# Provenance stamped 2026-08-11: this artifact was written by the API Evangelist
-# bulk sweep dated 2026-05-04, not harvested from the provider. See roadmap#35.
-method: generated
-modified: '2026-05-05'
-reconciled: false
+modified: '2026-08-30'
+generated: '2026-08-30'
+method: searched
+source: >-
+  Live probes 2026-08-30 of every host named in apis.yml. No AK Steel host
+  resolves; the successor site www.clevelandcliffs.com serves no developer
+  documentation and therefore no published limits or rate-limit response headers.
+reconciled: true
 tags:
   - Steel
   - Manufacturing
   - Metals
   - Rate Limiting
-description: AK Steel Holding does not operate a public API and has not since the 2020 acquisition by
-  Cleveland-Cliffs. There is no rate-limit policy to publish.
-notes: Defunct entity (acquired by Cleveland-Cliffs); no API documentation.
+description: >-
+  AK Steel Holding operates no public API and has not since the 2020-03-13
+  acquisition by Cleveland-Cliffs Inc., so there is no rate-limit policy, no
+  documented quota, and no runtime rate-limit header to record. An honest zero.
+limit_count: 0
+limits: []
+headers: []
+notes: >-
+  CORRECTION 2026-08-30 — this file previously carried a synthetic "Not
+  applicable" limits row written by the 2026-05-04 bulk sweep, and a
+  responseCodes block asserting 429/503 behaviour for an API that does not exist.
+  Both have been removed: nothing can be observed about the throttling behaviour
+  of an endpoint that was never published.
+policies:
+  - name: Successor entity
+    description: >-
+      Any integration request for former AK Steel product lines goes to
+      Cleveland-Cliffs Inc., the successor entity, through its sales
+      organisation. Cleveland-Cliffs is profiled separately as cleveland-cliffs.
+evidence:
+  - url: https://ir.aksteel.com/
+    status: <no response>
+    note: DNS NOERROR with no address record
+  - url: https://www.clevelandcliffs.com/api-docs
+    status: 404
 sources:
   - https://www.clevelandcliffs.com/
-responseCodes:
-  throttled: 429
-  serviceUnavailable: 503
-limits:
-  - name: Not applicable
-    scope: account
-    metric: varies
-    limit: no public API operated by AK Steel Holding
-policies:
-  - name: Successor Entity
-    description: API or EDI integrations for AK Steel product lines should be requested through
-      Cleveland-Cliffs Inc., AK Steel's successor entity.
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com

@@ -1,0 +1,78 @@
+specification: API Commons Well-Known
+specificationVersion: '0.1'
+provider: AK Steel Holding
+providerId: ak-steel-holding
+generated: '2026-08-30'
+method: probed
+source: >-
+  Direct unauthenticated probes of every host named in apis.yml (the AK Steel
+  investor-relations host and the successor-entity website), 2026-08-30.
+description: >-
+  Recorded absence. AK Steel Holding Corporation was acquired by Cleveland-Cliffs
+  Inc. on 2020-03-13 and no longer operates any web host of its own: aksteel.com
+  is still registered (Cloudflare nameservers, MX pointed at Cleveland-Cliffs'
+  Microsoft 365 tenant) but publishes NO A/AAAA record for the apex, www, or the
+  ir. subdomain, so every HTTP probe fails at DNS resolution rather than
+  returning a status code. The successor site www.clevelandcliffs.com answers,
+  and returns an HTML 404 page for every /.well-known/ path probed. No
+  well-known document of any kind was served, so NO WellKnown or SecurityTxt
+  pointer is emitted in apis.yml.
+hosts:
+  - host: ir.aksteel.com
+    note: >-
+      apis.yml humanURL for the AK Steel Investor Relations entry. DNS answers
+      NOERROR with no address record; curl exits 6 (could not resolve host).
+      No HTTP status code exists to record.
+    documents:
+      - path: /.well-known/security.txt
+        status: <no response>
+        reason: dns-no-address-record
+        file: null
+      - path: /.well-known/api-catalog
+        status: <no response>
+        reason: dns-no-address-record
+        file: null
+  - host: www.aksteel.com
+    note: >-
+      Former AK Steel corporate site. Last Wayback capture 2021-07-08; today DNS
+      answers NOERROR with no address record.
+    documents:
+      - path: /.well-known/security.txt
+        status: <no response>
+        reason: dns-no-address-record
+        file: null
+      - path: /.well-known/api-catalog
+        status: <no response>
+        reason: dns-no-address-record
+        file: null
+  - host: www.clevelandcliffs.com
+    note: >-
+      Successor entity site, declared as this provider's Website in apis.yml.
+      Host is live; every /.well-known/ path returns an HTML 404 page.
+      Probed here only because apis.yml names it; the host itself belongs to
+      the cleveland-cliffs provider profile.
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+        file: null
+      - path: /.well-known/openid-configuration
+        status: 404
+        file: null
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+        file: null
+      - path: /.well-known/api-catalog
+        status: 404
+        file: null
+      - path: /.well-known/ai-plugin.json
+        status: 404
+        file: null
+      - path: /.well-known/agent-card.json
+        status: 404
+        file: null
+      - path: /.well-known/agent.json
+        status: 404
+        file: null
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com

@@ -1,0 +1,59 @@
+# AK Steel Holding
+
+> AK Steel Holding Corporation was a producer of flat-rolled carbon, stainless and
+> electrical steel and of carbon and stainless tubular products, serving the
+> automotive, infrastructure, manufacturing and electrical power markets. It was
+> acquired by Cleveland-Cliffs Inc. on 2020-03-13 and no longer exists as an
+> independent company.
+
+<!--
+generated: 2026-08-30
+method: generated
+source: api-evangelist all/ak-steel-holding/apis.yml and the repo artifacts listed
+        below. No llms.txt is published by AK Steel Holding; none could be, because
+        the company operates no web host. Probed 2026-08-30.
+-->
+
+## Status
+
+AK Steel Holding has **no API, no developer portal and no machine-readable contract**,
+and cannot acquire one: it is a retired entity.
+
+- Acquired by Cleveland-Cliffs Inc., completed 2020-03-13.
+- `aksteel.com`, `www.aksteel.com` and `ir.aksteel.com` publish no DNS address record
+  as of 2026-08-30 — every HTTP probe fails to resolve. The domain is still registered
+  by the successor and routes mail only.
+- The successor site `www.clevelandcliffs.com` returns HTTP 404 for every
+  `/.well-known/` path, `/openapi.json`, `/swagger.json`, `/api-docs` and `/llms.txt`.
+- No first-party client library exists on npm, PyPI, RubyGems or crates.io.
+- No OpenAPI, AsyncAPI, GraphQL, gRPC or WSDL contract was found on any host.
+
+If you are an agent looking for a callable steel-industry interface, AK Steel is not one.
+
+## Where to go instead
+
+- [Cleveland-Cliffs Inc. — successor entity](https://www.clevelandcliffs.com): the company
+  that acquired AK Steel and now operates its mills and product lines.
+- [Cleveland-Cliffs Investor Relations](https://www.clevelandcliffs.com/investors): replaces
+  the retired `ir.aksteel.com` investor portal.
+- [Cleveland-Cliffs completes acquisition of AK Steel](https://www.clevelandcliffs.com/news/news-releases/detail/35/cleveland-cliffs-completes-acquisition-of-ak-steel):
+  the primary source for the 2020-03-13 completion date.
+
+## What this profile holds
+
+- [apis.yml](../apis.yml): the API Evangelist provider index for AK Steel Holding.
+- [lifecycle/ak-steel-holding-lifecycle.yml](../lifecycle/ak-steel-holding-lifecycle.yml):
+  entity retirement record, successor, and the observed state of each former host.
+- [well-known/ak-steel-holding-well-known.yml](../well-known/ak-steel-holding-well-known.yml):
+  the `/.well-known/` probe log — a recorded absence, every path.
+- [security/ak-steel-holding-domain-security.yml](../security/ak-steel-holding-domain-security.yml):
+  TLS/DNSSEC/SPF/DMARC posture of the retained `aksteel.com` zone and the successor site.
+- [plans/ak-steel-holding-plans-pricing.yml](../plans/ak-steel-holding-plans-pricing.yml):
+  no published plans (`plan_count: 0`).
+- [rate-limits/ak-steel-holding-rate-limits.yml](../rate-limits/ak-steel-holding-rate-limits.yml):
+  no published rate limits (`limit_count: 0`).
+- `blogs/`, `press/`, `search/`: archived industry coverage referencing AK Steel.
+
+## Optional
+
+- [AK Steel on LinkedIn](https://www.linkedin.com/company/ak-steel): the legacy company page.

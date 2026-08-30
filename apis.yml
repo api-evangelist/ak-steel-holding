@@ -41,8 +41,11 @@ description: >-
   manufacturing, and electrical power markets. AK Steel was acquired by
   Cleveland-Cliffs Inc. in March 2020 and now operates as a subsidiary.
 created: '2025-01-01'
-modified: '2026-04-19'
+modified: '2026-08-30'
 specificationVersion: '0.23'
+x-status: defunct
+x-status-detail: Acquired by Cleveland-Cliffs in March 2020; no longer exists as an
+  independent entity.
 apis:
   - aid: ak-steel-holding:investor-relations
     name: AK Steel Investor Relations
@@ -51,22 +54,42 @@ apis:
       to financial reports, SEC filings, news releases, and shareholder
       information. Following acquisition by Cleveland-Cliffs in 2020, investor
       inquiries are directed to Cleveland-Cliffs investor relations.
-    humanURL: https://ir.aksteel.com/
+    humanURL: https://www.clevelandcliffs.com/investors
     tags:
       - Finance
       - Investor Relations
       - SEC Filings
       - Shareholder
+    x-retired:
+      original_url: https://ir.aksteel.com/
+      status: <no response>
+      checked: '2026-08-30'
+      note: >-
+        The original AK Steel investor-relations host ir.aksteel.com no longer
+        publishes a DNS address record (NOERROR, no A/AAAA; last Internet Archive
+        capture 2021-10-22), so the pointer was removed rather than left to rot.
+        AK Steel's own profile already stated that investor inquiries are directed
+        to Cleveland-Cliffs, the successor entity that completed the acquisition on
+        2020-03-13; the entry now points at that company's live investor page
+        (HTTP 200, verified 2026-08-30).
     properties:
       - type: Documentation
-        url: https://ir.aksteel.com/
+        url: https://www.clevelandcliffs.com/investors
 common:
   - type: DomainSecurity
     url: security/ak-steel-holding-domain-security.yml
+  - type: Lifecycle
+    url: lifecycle/ak-steel-holding-lifecycle.yml
+  - type: LLMsTxt
+    url: llms/ak-steel-holding-llms.txt
+  - type: Plans
+    url: plans/ak-steel-holding-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/ak-steel-holding-rate-limits.yml
   - type: LinkedIn
     url: https://www.linkedin.com/company/ak-steel
-  - type: Website
-    url: https://www.clevelandcliffs.com
+  # No Website on purpose. AK Steel was acquired by Cleveland-Cliffs in March 2020 and
+  # has no site of its own; clevelandcliffs.com is the ACQUIRER's page.
   - type: Features
     data:
       - name: Flat-Rolled Carbon Steel
@@ -103,3 +126,30 @@ common:
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
+x-enrichment:
+  date: '2026-08-30'
+  status: minimal
+  artifacts_added: 3
+  pass: local-v1
+x-coverage:
+  state: none
+  reason: defunct
+  detail: >-
+    AK Steel Holding was absorbed into Cleveland-Cliffs on 2020-03-13 and has no
+    web presence left to read: aksteel.com is still registered and routes mail to
+    Cleveland-Cliffs' Microsoft 365 tenant, but the apex, www and ir subdomains
+    publish no DNS address record at all, so probes fail at resolution and never
+    reach an HTTP status.
+  evidence:
+    - url: https://ir.aksteel.com/
+      status: <no response>
+    - url: https://www.aksteel.com/
+      status: <no response>
+    - url: https://www.clevelandcliffs.com/.well-known/api-catalog
+      status: 404
+    - url: https://www.clevelandcliffs.com/news/news-releases/detail/35/cleveland-cliffs-completes-acquisition-of-ak-steel
+      status: 200
+  checked: '2026-08-30'
+x-parent: cleveland-cliffs
+x-relationship: acquisition
+x-acquired: 2020

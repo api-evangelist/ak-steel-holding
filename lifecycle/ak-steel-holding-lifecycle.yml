@@ -1,0 +1,74 @@
+specification: API Commons Lifecycle
+specificationVersion: '0.1'
+provider: AK Steel Holding
+providerId: ak-steel-holding
+generated: '2026-08-30'
+method: searched
+source: >-
+  Cleveland-Cliffs Inc. news release "Cleveland-Cliffs Completes Acquisition of
+  AK Steel" (HTTP 200, fetched 2026-08-30), plus live DNS/HTTP probes of
+  aksteel.com, www.aksteel.com and ir.aksteel.com on the same date.
+docs: https://www.clevelandcliffs.com/news/news-releases/detail/35/cleveland-cliffs-completes-acquisition-of-ak-steel
+description: >-
+  Entity lifecycle record. AK Steel Holding Corporation is retired: it was
+  acquired by Cleveland-Cliffs Inc. and ceased to exist as an independent
+  company on 2020-03-13. This artifact records the retirement of the company's
+  digital surface, not the deprecation of an API — AK Steel never published a
+  public API, developer portal or machine-readable contract.
+entity:
+  status: retired
+  status_date: '2020-03-13'
+  event: acquisition
+  successor: Cleveland-Cliffs Inc.
+  successor_website: https://www.clevelandcliffs.com
+  successor_provider_id: cleveland-cliffs
+  evidence:
+    - url: https://www.clevelandcliffs.com/news/news-releases/detail/35/cleveland-cliffs-completes-acquisition-of-ak-steel
+      status: 200
+      note: >-
+        "Cleveland-Cliffs Inc. (NYSE: CLF) announced today that it has
+        successfully completed the acquisition of AK Steel Holding Corporation."
+surfaces:
+  - name: AK Steel corporate website
+    url: https://www.aksteel.com/
+    status: retired
+    observed: '2026-08-30'
+    http_status: <no response>
+    note: >-
+      DNS answers NOERROR with no address record; curl exits 6. Last Internet
+      Archive capture 2021-07-08.
+  - name: AK Steel Investor Relations
+    url: https://ir.aksteel.com/
+    status: retired
+    observed: '2026-08-30'
+    http_status: <no response>
+    note: >-
+      DNS answers NOERROR with no address record. Last Internet Archive capture
+      2021-10-22. Investor information for the combined company is now published
+      at https://www.clevelandcliffs.com/investors (HTTP 200, 2026-08-30).
+  - name: aksteel.com domain registration
+    status: retained
+    observed: '2026-08-30'
+    note: >-
+      Domain remains registered to the successor (Cloudflare nameservers,
+      registry expiry 2027-12-17) and routes mail to
+      clevelandcliffs-com.mail.protection.outlook.com, but publishes no web host.
+      Retained for email and brand protection only.
+versioning:
+  policy: none-published
+  note: No API, no versioning policy.
+deprecation:
+  policy: none-published
+  sunset_header: false
+  deprecation_header: false
+  note: >-
+    No API deprecation policy exists because no API was ever published. The
+    company-level retirement is recorded under entity: above.
+status_page:
+  published: false
+  note: No status page found for AK Steel Holding or for the successor entity.
+sla:
+  published: false
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com

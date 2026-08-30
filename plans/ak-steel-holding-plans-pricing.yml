@@ -4,48 +4,48 @@ schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main
 provider: AK Steel Holding
 providerId: ak-steel-holding
 created: '2026-05-04'
-# Provenance stamped 2026-08-11: this artifact was written by the API Evangelist
-# bulk sweep dated 2026-05-04, not harvested from the provider. See roadmap#35.
-method: generated
-modified: '2026-05-05'
-reconciled: false
+modified: '2026-08-30'
+generated: '2026-08-30'
+method: searched
+source: >-
+  Live probes 2026-08-30 of every host named in apis.yml. aksteel.com,
+  www.aksteel.com and ir.aksteel.com publish no DNS address record (curl exit 6,
+  no HTTP status). The successor site www.clevelandcliffs.com answers HTTP 200
+  but publishes no pricing, plans or rate-card page and returns HTTP 404 for
+  /openapi.json, /api-docs and every /.well-known/ path.
+reconciled: true
 tags:
   - Automotive
   - Manufacturing
   - Materials
   - Steel
   - Metals
-description: AK Steel Holding ceased to exist as an independent company in March 2020 when it was
-  acquired by Cleveland-Cliffs Inc. There is no AK Steel API product, developer portal, or published
-  pricing. The only "AK Steel" digital surface that persists is its archived SEC investor-relations
-  page; current steel-products commerce flows through Cleveland-Cliffs sales and contract pricing on
-  steel tonnage, not API consumption.
-notes: AK Steel Holding is a defunct entity (now Cleveland-Cliffs). No API rate card has ever been
-  published. Plan below is a placeholder reflecting the historical sales-quote model.
+description: >-
+  AK Steel Holding Corporation publishes no API plans and no API pricing, and
+  cannot: it ceased to exist as an independent company on 2020-03-13 when
+  Cleveland-Cliffs Inc. completed its acquisition, and its web hosts have since
+  been withdrawn from DNS. This is an honest zero, not an unread page.
+plan_count: 0
+plans: []
+notes: >-
+  CORRECTION 2026-08-30 — this file previously carried a single invented
+  "Historical / Cleveland-Cliffs Quote" entry that the file itself described as
+  "a placeholder". No such plan is published by anyone; it has been removed and
+  replaced with plan_count: 0. Steel tonnage is sold under bilateral contracts by
+  the successor's sales organisation, which is a commercial motion, not an API plan.
+evidence:
+  - url: https://ir.aksteel.com/
+    status: <no response>
+    note: DNS NOERROR with no address record
+  - url: https://www.aksteel.com/
+    status: <no response>
+    note: DNS NOERROR with no address record
+  - url: https://www.clevelandcliffs.com/
+    status: 200
+    note: successor site; no pricing or plans page
 sources:
   - https://www.clevelandcliffs.com/
-  - https://en.wikipedia.org/wiki/AK_Steel
-plans:
-  - id: ak-steel-holding-historical
-    name: Historical / Cleveland-Cliffs Quote
-    type: enterprise
-    description: AK Steel was acquired by Cleveland-Cliffs in 2020. Steel-product purchases (carbon,
-      stainless, electrical, tubular) are quoted directly by the Cleveland-Cliffs sales team against
-      tonnage, grade, and delivery terms.
-    entries:
-      - label: Steel product quote
-        name: steel_quote
-        type: subscription
-        metric: contract
-        limit: -1
-        timeFrame: month
-        geo: global
-        unit: 1
-        price: contact Cleveland-Cliffs sales
-        userMultiplied: false
-    elements:
-      - name: Carbon, stainless, and electrical steel products
-      - name: Sales-quote pricing on tonnage / grade
+  - https://www.clevelandcliffs.com/news/news-releases/detail/35/cleveland-cliffs-completes-acquisition-of-ak-steel
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
