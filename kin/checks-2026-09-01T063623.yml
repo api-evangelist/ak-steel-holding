@@ -1,16 +1,16 @@
 ---
 kin_checks:
   slug: ak-steel-holding
-  schema_version: 0.16.0
-  scored_at: '2026-08-29'
-  run_ts: 2026-08-29T230545
+  schema_version: 0.17.2
+  scored_at: '2026-09-01'
+  run_ts: 2026-09-01T063623
   note: Actionable checks only (missed + partial). earned/na are every other check
-    in rubric/scoring-0.16.0.yml; counts below let you verify that.
+    in rubric/scoring-0.17.2.yml; counts below let you verify that.
   counts:
     total: 130
-    earned: 9
-    partial: 4
-    missed: 75
+    earned: 10
+    partial: 1
+    missed: 77
     na: 42
   checks:
   - id: multiple_apis
@@ -61,6 +61,8 @@ kin_checks:
     status: missed
   - id: status_page_present
     status: missed
+  - id: rate_limits_documented
+    status: missed
   - id: rate_limits_rich
     status: missed
   - id: deprecation_policy
@@ -98,6 +100,8 @@ kin_checks:
   - id: support_channel
     status: missed
   - id: blog_present
+    status: missed
+  - id: plans_present
     status: missed
   - id: plans_multiple
     status: missed
@@ -163,16 +167,6 @@ kin_checks:
     status: missed
   - id: agentic_commerce
     status: missed
-  - id: rate_limits_documented
-    status: partial
-    earned: 2.0
-  - id: documentation_present
-    status: partial
-    earned: 2.0
-    detail: pointer liveness 0.5
-  - id: plans_present
-    status: partial
-    earned: 2.0
   - id: rate_limit_signal
     status: partial
     earned: 3.5
