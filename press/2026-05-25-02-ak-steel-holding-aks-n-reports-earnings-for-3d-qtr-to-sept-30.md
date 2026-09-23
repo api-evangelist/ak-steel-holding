@@ -1,7 +1,9 @@
 ---
 title: AK Steel Holding (AKS,N) reports earnings for 3d qtr to Sept 30
 url: https://www.nytimes.com/1995/10/12/business/ak-steel-holding-aksn-reports-earnings-for-3d-qtr-to-sept-30.html
-date: '2026-05-25'
+published: ''
+date_basis: harvested
+harvested: '2026-05-25'
 query: '"AK Steel Holding" press release artificial intelligence'
 position: 2
 source: serpapi-google

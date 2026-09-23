@@ -1,7 +1,9 @@
 ---
 title: Cleveland-Cliffs Looks to AK Steel Acquisition, New HBI ...
 url: https://www.industrialinfo.com/news/article/cleveland-cliffs-looks-to-ak-steel-acquisition-new-hbi-plant-for-positive-outlook-in-2020--281603
-date: '2026-05-25'
+published: ''
+date_basis: harvested
+harvested: '2026-05-25'
 query: '"AK Steel Holding" press release artificial intelligence'
 position: 1
 source: serpapi-google
