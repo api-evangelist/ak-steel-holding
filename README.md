@@ -1,4 +1,4 @@
-# AK Steel Holding (ak-steel-holding)
+# AK Steel Holding
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,59 +64,60 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
+> **No longer operating.** This company or product has shut down, been discontinued, or been deprecated. This profile is kept as a historical record and is not maintained or rated.
+
 AK Steel Holding Corporation was a leading producer of flat-rolled carbon, stainless, and electrical steel products, as well as carbon and stainless tubular products, primarily serving the automotive, infrastructure, manufacturing, and electrical power markets. AK Steel was acquired by Cleveland-Cliffs Inc. in March 2020 and now operates as a subsidiary.
 
-**URL:** [Visit APIs.json URL](https://raw.githubusercontent.com/api-evangelist/ak-steel-holding/refs/heads/main/apis.yml)
+**Areas:** Automotive · Manufacturing · Materials · Steel · Metals · Fortune 500 · Defunct
 
-**Run:** [Capabilities Using Naftiko](https://github.com/naftiko/fleet?utm_source=api-evangelist&utm_medium=readme&utm_campaign=company-api-evangelist&utm_content=repo)
+## AK Steel Holding on APIs.io (historical record)
 
-## Tags:
+Everything profiled for AK Steel Holding is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/ak-steel-holding/](https://apis.io/providers/ak-steel-holding/)** — or go straight to one of the APIs or properties below.
 
- - Automotive, Manufacturing, Materials, Steel, Metals
+### APIs (1)
 
-## Timestamps
+- [AK Steel Investor Relations](https://apis.io/apis/ak-steel-holding/investor-relations/) — AK Steel Holding Corporation investor relations portal providing access to financial reports, SEC filings, news releases, and shareholder information.…
 
-- **Created:** 2025-01-01
-- **Modified:** 2026-04-19
+### Published properties
 
-## APIs
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-### AK Steel Investor Relations
-AK Steel Holding Corporation investor relations portal providing access to financial reports, SEC filings, news releases, and shareholder information. Following acquisition by Cleveland-Cliffs in 2020, investor inquiries are directed to Cleveland-Cliffs investor relations.
+#### Security (1)
 
-**Human URL:** [https://ir.aksteel.com/](https://ir.aksteel.com/)
+Authentication, trust centre, and vulnerability disclosure.
 
-#### Tags:
+- [Ak Steel Holding Domain Security](https://apis.io/security/ak-steel-holding/ak-steel-holding-domain-security/)
 
- - Finance, Investor Relations, SEC Filings, Shareholder
+#### Plans and pricing (1)
 
-#### Properties
+Published plans, tiers and prices.
 
-- [Documentation](https://ir.aksteel.com/)
+- [Ak Steel Holding Plans Pricing](https://apis.io/plans/ak-steel-holding/ak-steel-holding-plans-pricing/)
 
-## Common Properties
+#### Rate limits (1)
 
-- [Website](https://www.clevelandcliffs.com)
+Published request limits.
 
-## Features
+- [Ak Steel Holding Rate Limits](https://apis.io/rate-limits/ak-steel-holding/ak-steel-holding-rate-limits/)
 
-| Name | Description |
-|------|-------------|
-| Flat-Rolled Carbon Steel | High-quality flat-rolled carbon steel products serving automotive and manufacturing sectors, including advanced high-strength steel grades for lightweighting applications. |
-| Stainless Steel Products | Stainless and electrical steel products for infrastructure, manufacturing, and electrical power generation applications. |
-| Tubular Products | Carbon and stainless tubular products and related customer solutions through subsidiary operations. |
-| Automotive Steel Solutions | Specialized automotive steel production including hot- and cold-stamped components, die design, and tooling services. |
+#### FinOps (1)
 
-## Use Cases
+What the API costs to run, by operation.
 
-| Name | Description |
-|------|-------------|
-| Automotive Manufacturing | Steel suppliers and automotive OEMs source advanced high-strength steel for vehicle body structures and components. |
-| Electrical Power Infrastructure | Utilities and electrical equipment manufacturers source specialized electrical steel for transformers and motors. |
-| Construction and Infrastructure | Infrastructure projects source flat-rolled carbon steel for structural applications. |
+- [Ak Steel Holding Finops](https://apis.io/finops/ak-steel-holding/ak-steel-holding-finops/)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
+**Not rated** — this company is recorded as no longer operating, so no score is published. If it is in fact operating, say so on this repository and it will be re-profiled.
 
-**Email:** kin@apievangelist.com
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for AK Steel Holding: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/ak-steel-holding/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
